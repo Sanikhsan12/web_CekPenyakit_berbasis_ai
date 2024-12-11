@@ -7,7 +7,7 @@ from groq import Groq as gq
 app = flask.Flask(__name__, template_folder='view')
 
 # ! API Key
-key = "your-api-key here"
+key = "your-api-key"
 client = gq(api_key=key)
 
 def chat_bot(gejala):
