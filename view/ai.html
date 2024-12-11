@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+    <!-- link cdn tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- chat bot -->
+    <div class="container mx-auto p-4">
+      <h1 class="text-2xl font-bold mb-4">
+        Masukan Gejala Apa Saja yang anda rasakan !
+      </h1>
+
+      <form action="/kesehatan" method="post" class="space-y-4">
+        <div>
+          <label for="gejala" class="block">Gejala</label>
+          <input
+            type="text"
+            id="gejala"
+            name="gejala"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Masukan Gejala"
+            required
+          />
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- output -->
+    <div class="container-output mx-auto p-3">
+      <div>
+        <p>{{ data }}</p>
+      </div>
+    </div>
+  </body>
+</html>
